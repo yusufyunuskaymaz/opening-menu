@@ -31,9 +31,10 @@
             text-decoration: none;
             color: white;
             display: inline-block;
+            transition: transform .3s;
+
         }
         a:hover{
-            transition: .3s;
             transform: scale(90%);
         }
         a:not(:hover){
@@ -55,16 +56,23 @@
         }
         nav{
             background-color: rgb(32, 178, 170,0.8);
-            width: 20%;
+            width: 20vw;
             height: 100vh;
             text-align: center;
             color: white;
-            position: relative;
-            right: 222px;
+            position: absolute;
+            top:0;
+            left: -15vw;
+            transition: transform .9s;
+
+           
+        }
+        i{
+           position: relative;
+           left: 1.8rem;
         }
         nav:hover{
             transform: translate(222px);
-            transition: .9s;
         }
         nav:hover i{
             transform: rotate(180deg);
@@ -74,10 +82,10 @@
             right: 222px;
             transition: 1s;
         }
-       
-        i{
-           position: relative;
-           left: 50px;
+        
+        nav:not(:hover) i{
+            transform: rotate(720deg);
+            transition: .7s;
         }
         
     </style>
